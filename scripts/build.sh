@@ -7,10 +7,8 @@ cd "$PROJECT_DIR"
 
 mkdir -p build/classes
 
-# Compile with Hadoop libraries from the active Hadoop installation.
-javac -classpath "$(hadoop classpath)" -d build/classes src/WordCount.java
-
-# Build runnable JAR.
-jar -cvf build/wordcount.jar -C build/classes .
+# Build the project with Maven and copy the packaged JAR to the legacy build path.
+./mvnw -q -DskipTests package
+cp target/wordcount-hadoop-1.0.0.jar build/wordcount.jar
 
 echo "Build complete: $PROJECT_DIR/build/wordcount.jar"
