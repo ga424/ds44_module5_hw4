@@ -233,6 +233,35 @@ Stop and clean containers:
 docker compose -f docker-compose.hadoop.yml down -v
 ```
 
+## How to Validate the JAR
+
+Use these commands to verify the packaged JAR and the end-to-end Hadoop flow:
+
+1. Build the JAR and copy it to the legacy `build/` location:
+
+```bash
+bash scripts/build.sh
+ls -l build/wordcount.jar
+```
+
+2. Run the local Hadoop smoke test, which uploads `input.txt`, executes the JAR in a containerized Hadoop cluster, and prints the final counts:
+
+```bash
+bash scripts/run_local_containerized.sh
+```
+
+3. Confirm the output file in the project root matches the expected token counts generated from `input.txt`:
+
+```bash
+cat output.txt
+```
+
+Expected success indicators:
+
+- `scripts/build.sh` finishes with `Build complete: .../build/wordcount.jar`
+- `scripts/run_local_containerized.sh` finishes with `Containerized run completed successfully.`
+- `output.txt` contains tab-separated `token<TAB>count` rows sorted alphabetically
+
 ## Build the Program
 
 ```bash
