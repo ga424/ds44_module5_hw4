@@ -1,0 +1,22 @@
+Apache Hadoop is an open-source framework for distributed storage and processing of very large data sets.
+This sample file contains multiple paragraphs, punctuation, numbers, and mixed capitalization to exercise the tokenizer and normalization logic.
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+
+Numbers and symbols: 42, 3.1415, $100, 1st-place, user@example.com, https://example.org/path?query=1
+
+Contractions and possessives: don't, it's, John's, they're — plus hyphenated-words and under_score identifiers.
+
+Repeated tokens for counting: data data Data DATA data; test test Test.
+
+Edge cases: punctuation!!! multiple---dashes, ellipses... and (parentheses), [brackets], {braces}.
+
+Short lines and code-like snippets:
+    for(int i=0;i<10;i++) { System.out.println(i); }
+
+A final paragraph to simulate natural language: In 2026 the data pipeline ingested terabytes-per-day; the job succeeded, failed, and retried twice.
+
+End of sample input.
+Hello Hadoop Hadoop MapReduce.
+Hello WordCount example.
+MapReduce on Hadoop is powerful.
