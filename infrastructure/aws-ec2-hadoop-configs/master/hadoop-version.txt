@@ -1,0 +1,7 @@
+Hadoop 3.4.3
+Source code repository https://github.com/apache/hadoop.git -r 9d50c6884666e794e45102260a4017bb31802e1b
+Compiled by stevel on 2026-02-13T14:23Z
+Compiled on platform linux-x86_64
+Compiled with protoc 3.23.4
+From source with checksum 2331238c4c2929e66645316a32a8613
+This command was run using /usr/local/hadoop/share/hadoop/common/hadoop-common-3.4.3.jar

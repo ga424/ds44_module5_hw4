@@ -1,0 +1,5 @@
+Total Nodes:3
+         Node-Id	     Node-State	Node-Http-Address	Number-of-Running-Containers
+ip-172-31-44-28.ec2.internal:39911	        RUNNING	ip-172-31-44-28.ec2.internal:8042	                           0
+ip-172-31-34-38.ec2.internal:35157	        RUNNING	ip-172-31-34-38.ec2.internal:8042	                           0
+ip-172-31-39-22.ec2.internal:39279	        RUNNING	ip-172-31-39-22.ec2.internal:8042	                           0

@@ -1,0 +1,4 @@
+1522 NameNode
+4995 Jps
+1748 SecondaryNameNode
+4030 ResourceManager

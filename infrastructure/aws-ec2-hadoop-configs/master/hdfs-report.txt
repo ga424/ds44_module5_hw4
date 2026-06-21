@@ -1,0 +1,82 @@
+Configured Capacity: 21293850624 (19.83 GB)
+Present Capacity: 9229602816 (8.60 GB)
+DFS Remaining: 9227341824 (8.59 GB)
+DFS Used: 2260992 (2.16 MB)
+DFS Used%: 0.02%
+Replicated Blocks:
+	Under replicated blocks: 2
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (3):
+
+Name: 172.31.34.38:9866 (slave2)
+Hostname: ip-172-31-34-38.ec2.internal
+Decommission Status : Normal
+Configured Capacity: 7097950208 (6.61 GB)
+DFS Used: 753664 (736 KB)
+Non DFS Used: 4022116352 (3.75 GB)
+DFS Remaining: 3058302976 (2.85 GB)
+DFS Used%: 0.01%
+DFS Remaining%: 43.09%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Jun 21 22:46:52 UTC 2026
+Last Block Report: Sun Jun 21 22:14:13 UTC 2026
+Num of Blocks: 9
+
+
+Name: 172.31.39.22:9866 (slave1)
+Hostname: ip-172-31-39-22.ec2.internal
+Decommission Status : Normal
+Configured Capacity: 7097950208 (6.61 GB)
+DFS Used: 753664 (736 KB)
+Non DFS Used: 3970084864 (3.70 GB)
+DFS Remaining: 3110334464 (2.90 GB)
+DFS Used%: 0.01%
+DFS Remaining%: 43.82%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Jun 21 22:46:52 UTC 2026
+Last Block Report: Sun Jun 21 22:14:13 UTC 2026
+Num of Blocks: 9
+
+
+Name: 172.31.44.28:9866 (slave3)
+Hostname: ip-172-31-44-28.ec2.internal
+Decommission Status : Normal
+Configured Capacity: 7097950208 (6.61 GB)
+DFS Used: 753664 (736 KB)
+Non DFS Used: 4021714944 (3.75 GB)
+DFS Remaining: 3058704384 (2.85 GB)
+DFS Used%: 0.01%
+DFS Remaining%: 43.09%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Jun 21 22:46:52 UTC 2026
+Last Block Report: Sun Jun 21 22:14:13 UTC 2026
+Num of Blocks: 9
+
+
