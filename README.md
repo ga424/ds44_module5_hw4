@@ -8,6 +8,7 @@ This project contains a complete Java MapReduce WordCount example for a Hadoop c
 # Build JAR
 ./mvnw clean package
 
+
 # Run all tests (19 tests)
 ./mvnw clean test
 
