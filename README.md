@@ -270,18 +270,36 @@ hdfs dfs -ls /user/hadoop/input
 hdfs dfs -cat /user/hadoop/output_wordcount/part-r-00000
 ```
 
-## Expected Output for Included Input
+## Included Input / Output
 
-```text
-example    1
-hadoop     3
-hello      2
-is         1
-mapreduce  2
-on         1
-powerful   1
-wordcount  1
+- `input.txt`: A realistic multi-paragraph sample that exercises the tokenizer and normalization logic (punctuation, numbers, email/URL fragments, hyphenation, code-like snippets, repeated tokens).
+- `output.txt`: A token-count listing produced using the same normalization rules as `WordCount` (lowercased, non-alphanumeric characters removed). The repository includes a precomputed `output.txt` matching `input.txt`.
+
+To regenerate `output.txt` locally (without Hadoop), run the Java local generator that uses the same normalization rules:
+
+```bash
+# compile and run the LocalWordCount main
+./mvnw -q compile exec:java -Dexec.mainClass=local.LocalWordCount -Dexec.cleanupDaemonThreads=false
+
+# then view the regenerated output
+cat output.txt | less
 ```
+
+To produce the HDFS MapReduce output (runs the full Hadoop job against HDFS):
+
+```bash
+# upload input to HDFS (run on a node with Hadoop client available)
+hdfs dfs -mkdir -p /user/hadoop/input
+hdfs dfs -put -f input.txt /user/hadoop/input/input.txt
+
+# run the MapReduce job (this script expects HDFS input and output paths)
+./scripts/run_wordcount.sh /user/hadoop/input/input.txt /user/hadoop/output_wordcount
+
+# read the result produced by the Hadoop job
+hdfs dfs -cat /user/hadoop/output_wordcount/part-r-00000 | less
+```
+
+Note: `LocalWordCount` performs the same normalization as `WordCount` and writes a tab-separated `token\tcount` listing to `output.txt` in the project root. Use it when you want to validate tokenization/counting locally before running on a cluster.
 
 ## Design Patterns
 
